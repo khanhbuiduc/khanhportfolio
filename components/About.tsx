@@ -44,7 +44,7 @@ export function About() {
       {/* Background gradient */}
       <div className="absolute inset-0 -z-10">
         <motion.div
-          className="absolute top-0 right-0 w-96 h-96 bg-cyan-900/10 rounded-full blur-3xl"
+          className="absolute top-0 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-cyan-900/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -52,7 +52,7 @@ export function About() {
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' as const }}
         />
         <motion.div
-          className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl"
+          className="absolute bottom-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-purple-900/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.1, 1],
             x: [0, 40, 0],

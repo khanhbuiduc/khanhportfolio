@@ -60,7 +60,7 @@ export function Footer() {
           viewport={{ once: true }}
         >
           {/* Left content */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               <span className="gradient-text">Let's Connect</span>
             </h2>

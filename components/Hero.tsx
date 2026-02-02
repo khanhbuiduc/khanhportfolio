@@ -57,12 +57,12 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-900/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-900/20 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-48 h-48 sm:w-72 sm:h-72 bg-purple-900/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-64 h-64 sm:w-96 sm:h-96 bg-cyan-900/20 rounded-full blur-3xl" />
       </motion.div>
 
       <motion.div
-        className="w-full max-w-4xl"
+        className="w-full max-w-4xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -126,7 +126,7 @@ export function Hero() {
 
         {/* CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           variants={itemVariants}
         >
           <motion.div
