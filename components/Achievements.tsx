@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Trophy, Award, Star, Code2 } from 'lucide-react';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Trophy, Award, Star, Code2 } from "lucide-react";
 import {
   achievements as achievementsData,
   achievementStats,
@@ -10,7 +10,7 @@ import {
   achievementsAwardCaption,
   achievementsSectionSubtitle,
   achievementsMilestonesTitle,
-} from '@/data/personal';
+} from "@/data/personal";
 
 const achievementIconMap = {
   trophy: Trophy,
@@ -68,7 +68,7 @@ export function Achievements() {
           className="mb-16"
           initial={{ opacity: 0, y: 24, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h3
@@ -88,7 +88,7 @@ export function Achievements() {
             transition={{
               opacity: { duration: 0.6, delay: 0.15 },
               scale: { duration: 0.6, delay: 0.15 },
-              y: { type: 'spring', stiffness: 400, damping: 25 },
+              y: { type: "spring", stiffness: 400, damping: 25 },
             }}
             viewport={{ once: true, amount: 0.2 }}
           >
@@ -144,13 +144,13 @@ export function Achievements() {
                   key={achievement.id}
                   variants={itemVariants}
                   className={`flex gap-6 sm:gap-8 ${
-                    !isEven ? 'sm:flex-row-reverse' : ''
+                    !isEven ? "sm:flex-row-reverse" : ""
                   }`}
                 >
                   {/* Content */}
                   <div className="flex-1 sm:flex-1 pl-12 sm:pl-0">
                     <motion.div
-                      className={`glass rounded-lg glow-interactive transition-all duration-300 ${achievement.image ? 'overflow-hidden p-0' : 'p-6'}`}
+                      className={`glass rounded-lg glow-interactive transition-all duration-300 ${achievement.image ? "overflow-hidden p-0" : "p-6"}`}
                       whileHover={{ y: -5 }}
                     >
                       {achievement.image && (
@@ -164,26 +164,26 @@ export function Achievements() {
                           />
                         </div>
                       )}
-                      <div className={achievement.image ? 'p-6' : ''}>
-                      <div className="flex items-start gap-3 mb-3">
-                        <div className="mt-1 p-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20">
-                          <Icon className="w-5 h-5 text-purple-400" />
+                      <div className={achievement.image ? "p-6" : ""}>
+                        <div className="flex items-start gap-3 mb-3">
+                          <div className="mt-1 p-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20">
+                            <Icon className="w-5 h-5 text-purple-400" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-bold text-white">
+                              {achievement.title}
+                            </h3>
+                            <p className="text-sm text-slate-400">
+                              {achievement.date}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="text-lg font-bold text-white">
-                            {achievement.title}
-                          </h3>
-                          <p className="text-sm text-slate-400">
-                            {achievement.date}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-slate-300 mb-3">
-                        {achievement.description}
-                      </p>
-                      <span className="inline-block px-3 py-1 text-xs rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                        {achievement.category}
-                      </span>
+                        <p className="text-slate-300 mb-3">
+                          {achievement.description}
+                        </p>
+                        <span className="inline-block px-3 py-1 text-xs rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                          {achievement.category}
+                        </span>
                       </div>
                     </motion.div>
                   </div>
@@ -201,7 +201,7 @@ export function Achievements() {
 
         {/* Stats section */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
